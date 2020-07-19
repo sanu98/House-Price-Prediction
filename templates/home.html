@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="static/sh.css">
+    <title>House-Price-Prediction</title>
+
+<style>
+form {
+  text-align: center;
+}
+
+.con{
+color: black;
+text-align : center;
+font-size: 200%
+}
+.a{
+
+color : green;}
+body {background-color: lightblue;}
+
+.b{ 
+color : yellow;
+text-align : center;
+}
+footer{
+background-color: blue;
+  padding: 10px;}
+
+header{  background-color: blue   }
+
+.cono{
+color : green;}
+input {
+  height: 100%;
+}
+h1{
+text-align : center;
+color : brown;
+font-size: 200%}
+
+h2{
+text-align : center;}
+
+</style>
+</head>
+<body>
+        <header>
+                <div class='con'>
+		
+                       <b> HOUSE PRICE PREDICTION </b>
+			<br></br>
+                </div>
+
+        </header>
+	<h1> <b>Enter below details</b> </h1>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <div class='cono'> 
+
+            <input type="text" name='bedroom' placeholder="Enter no of Bedrooms"><br> </br>
+            <input type="text" name="bathrooms" placeholder="Enter no of Bathrooms"><br> </br>
+            <input type="text" name="sqft_living" placeholder="Enter Square ft"><br> </br>
+            <input type="text" name="floors" placeholder="Enter Floor no"><br> </br>
+            <input type="text" name="waterfront" placeholder="Waterfront or not 0/1"><br> </br>
+            <input type="text" name="grade" placeholder="Enter Grade"><br> </br>
+            <input type="text" name="sqft_above" placeholder="Enter Sqft_above"><br> </br>
+            <input type="text" name="sqft_basement" placeholder="Enter Sqft_basement"><br> </br>
+            <input type="submit" class="a" value="predict"><br> </br>
+           </div>
+        </form>
+		<h2>	{{ predicted }} </h2>
+</body>
+	<footer>
+
+		<div class="b">
+
+			Copyright @Kumar Sanu Lal
+		</div>
+	</footer>
+</html>
